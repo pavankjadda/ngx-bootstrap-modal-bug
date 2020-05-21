@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngx-bootstrap-modal-bug"
+    }
+  },
+  "defaultProject": "ngx-bootstrap-modal-bug",
+  "cli": {
+    "analytics": false
+  }
 }
