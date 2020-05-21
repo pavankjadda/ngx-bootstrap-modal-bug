@@ -55,6 +55,13 @@ export class AppComponent  implements OnInit
       data=>
       {
         this.sequenceNumbers=data;
+
+        let sequenceNumbers = new MatTableDataSource<SequenceNumber>();
+        sequenceNumbers.data = data;
+        this.sequenceNumbersDataSource = sequenceNumbers;
+        this.changeDetectorRef.detectChanges();
+        this.sequenceNumbersDataSource.sort = this.sort;
+        this.sequenceNumbersDataSource.paginator = this.paginator;
       }
     )
   }

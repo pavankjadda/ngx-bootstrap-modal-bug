@@ -15,6 +15,9 @@ import {MatDividerModule} from "@angular/material/divider";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatDialogModule} from "@angular/material/dialog";
+import {HttpClientModule} from '@angular/common/http';
+import {ModalModule} from 'ngx-bootstrap/modal';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -23,7 +26,9 @@ import {MatDialogModule} from "@angular/material/dialog";
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     MatRadioModule,
+    HttpClientModule,
     FormsModule,
     MatButtonModule,
     MatTableModule,
@@ -35,7 +40,8 @@ import {MatDialogModule} from "@angular/material/dialog";
     MatDividerModule,
     MatExpansionModule,
     MatDatepickerModule,
-    MatDialogModule
+    MatDialogModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
